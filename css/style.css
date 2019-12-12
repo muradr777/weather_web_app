@@ -2,20 +2,46 @@
 
 html, body {
 	margin: 0;
+	font-family: 
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Bebas Neue', cursive !important;
+}
+
+p.pst {
+	margin-bottom: 0;
+}
+
+a {
+	transition: color .3s;
 }
 
 main.wrapper {
-	min-height: 70vh;
+	min-height: calc(100vh - 50px);
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
+.main__cover {
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("../img/blur-cars-dew-drops-125510.jpg");
+}
+
 .cover-container {
 	max-width: 46em;
-	padding: 10em 5em;
+	padding: 5rem;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.cover-container .cover-txt {
+	padding: 2em 4em;
+	background-color: #fff;
 }
 
 .cover-container .cover-txt__title {
@@ -44,7 +70,7 @@ main.wrapper {
 	padding: 8px 15px;	
 	background-color: #fff;
 	border: 1px solid #f6f6f6;
-	box-shadow: 1px 1px 2px 1px #ddd;
+	box-shadow: 1px 1px 2px 1px #444;
 	transition: opacity .3s ease-in-out;
 	flex-direction: column;
 	display: -webkit-flex;
@@ -58,6 +84,93 @@ main.wrapper {
 	width: 100%;	
 }
 
+
+/* Data Table & Diagramm */
+.d_diagramm svg {
+	width: 100%;
+	height: auto;
+}
+
+.d_table {
+	padding: 30px 15px;	
+	border-top: 1px solid #ddd;
+}
+
+
+/* Categories */
+.categories-container {
+	padding: 5em 0px;
+}
+
+.category-card {
+	padding: 20px;
+	position: relative;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 1px 1px 2px 2px #ddd;
+	transition: box-shadow .3s ease-in-out;
+}
+
+.category-card:hover {
+	box-shadow: 3px 3px 3px 3px #eee;
+}
+
+.category-card .link__block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.category-card__ico {
+	margin-bottom: 20px;
+}
+
+.category-card__ico img {
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.category-card__title {
+	font-size: 2rem;
+	font-family: 'Bebas Neue', cursive;	
+}
+
 footer {
 	margin-top: 20px;
+}
+
+.footer-title {
+	border-bottom: 1px solid #f8f9fa;
+}
+
+.page-footer__content {
+	background-color: #434a52;
+}
+
+.footer-menu * {
+	color: #f8f9fa !important;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+	.navbar .navbar-nav {
+		flex-direction: row;
+	}
+
+	.navbar .navbar-nav .nav-link {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.navbar .navbar-nav .nav-link {
+		font-size: 12px;
+	}
+	.d_table {
+		font-size: 14px;
+	}
 }
