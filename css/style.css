@@ -4,10 +4,6 @@ html, body {
 	margin: 0;
 }
 
-.pst {
-
-}
-
 main.wrapper {
 	min-height: 70vh;
 	padding-top: 30px;
@@ -26,6 +22,40 @@ main.wrapper {
 	font-size: 4em;
 	margin-bottom: 20px;
 	font-family: 'Bebas Neue', cursive;
+}
+
+.c_dropdown {
+	position: relative;
+}
+
+.c_dropdown:hover .c_dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.c_dropdown-menu {
+	opacity: 0;
+	visibility: hidden;
+	top: 40px;
+	left: 0;
+	position: absolute;
+	min-width: 10em;
+	border-radius: 3px;
+	padding: 8px 15px;	
+	background-color: #fff;
+	border: 1px solid #f6f6f6;
+	box-shadow: 1px 1px 2px 1px #ddd;
+	transition: opacity .3s ease-in-out;
+	flex-direction: column;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.c_dropdown-menu .c_dropdown_item {
+	width: 100%;	
 }
 
 footer {
