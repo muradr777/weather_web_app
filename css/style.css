@@ -1,10 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap');
+
 html, body {
 	margin: 0;
 }
 
+.pst {
+
+}
+
 main.wrapper {
+	min-height: 70vh;
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+
+.cover-container {
+	max-width: 46em;
+	padding: 10em 5em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.cover-container .cover-txt__title {
+	font-size: 4em;
+	margin-bottom: 20px;
+	font-family: 'Bebas Neue', cursive;
 }
 
 footer {
