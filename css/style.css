@@ -17,6 +17,10 @@ a {
 	transition: color .3s;
 }
 
+h1.page__title {
+	border-bottom: 1px solid #313E50;
+}
+
 main.wrapper {
 	min-height: calc(100vh - 50px);
 	padding-top: 30px;
@@ -99,7 +103,7 @@ main.wrapper {
 
 /* Categories */
 .categories-container {
-	padding: 5em 0px;
+	padding: 2em 0px;
 }
 
 .category-card {
@@ -107,12 +111,12 @@ main.wrapper {
 	position: relative;
 	border-radius: 5px;
 	text-align: center;
-	box-shadow: 1px 1px 2px 2px #ddd;
+	box-shadow: 0 1px 2px 2px #ddd;
 	transition: box-shadow .3s ease-in-out;
 }
 
 .category-card:hover {
-	box-shadow: 3px 3px 3px 3px #eee;
+	box-shadow: 0 3px 6px 3px #bababa;
 }
 
 .category-card .link__block {
@@ -136,6 +140,75 @@ main.wrapper {
 	font-size: 2rem;
 	font-family: 'Bebas Neue', cursive;	
 }
+
+.team-card {
+	text-align: center;
+	border-radius: 5px;
+	padding: 15px;
+	border: 1px solid #ddd;
+	margin: 1.2rem 0;
+}
+
+.team-card .team-card__avatar {
+	height: 120px;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.team-card .team-card__title {
+	font-size: 1.2rem;
+	font-family: 'Bebas Neue', cursive;	
+}
+
+.team-card:hover {
+	box-shadow: 0 3px 6px 3px #bababa;
+	transition: box-shadow .3s ease-in-out;
+}
+
+.team-card:hover .link__block {
+	opacity: 1;
+	visibility: visible;
+}
+
+.team-card .team-card__content {
+ 	display: -webkit-box;	
+	-webkit-line-clamp: 3;
+  	-webkit-box-orient: vertical;  
+  	overflow: hidden;
+}
+
+.team-card .link__block {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #455561;
+	font-size: 1.2rem;
+	position: absolute;
+	text-decoration: none;
+	background-color: rgba(255,255,255, .88);
+	text-transform: uppercase;
+	font-weight: 600;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s ease-in-out; 
+}
+
 
 footer {
 	margin-top: 20px;
@@ -163,6 +236,33 @@ footer {
 	.navbar .navbar-nav .nav-link {
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.cover-container {
+		padding: 0;
+		max-width: 90%;
+	}
+
+	.cover-container .cover-txt__title {
+		font-size: 2rem;
+	}
+
+	.cover-container .cover-txt {
+		padding: 1rem 2rem;
+	}
+
+	.cat-page-title {
+		font-size: 2em;
+	}
+
+	.categories-container {
+		padding: 2em 0;
+	}
+
+	.categories-container > .row > div:not(:last-child) {
+		padding-bottom: 15px;
 	}
 }
 
